@@ -59,7 +59,7 @@ const MovieDetail = () => {
                             <Calendar className="mr-2 text-blue-500" />
                             <span>{new Date(movie.release_date).getFullYear()}</span>
                         </div>
-                        <div className="flex items-center bg-white rounded drop-shadow p-3``">
+                        <div className="flex items-center bg-white rounded drop-shadow p-3 mb-20``">
                             <Clock className="mr-2 text-green-500" />
                             <span>{movie.runtime} min</span>
                         </div>
