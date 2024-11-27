@@ -1,0 +1,38 @@
+import React, { useState } from 'react';
+import { Search } from 'lucide-react';
+import { useMovies } from '../context/MovieContext';
+
+const SearchBar = () => {
+    const [searchTerm, setSearchTerm] = useState('');
+    const { fetchMovies } = useMovies();
+
+    const handleSearch = (e) => {
+        e.preventDefault();
+        if (searchTerm.trim()) {
+            fetchMovies(searchTerm);
+        }
+    };
+
+    return (
+        <div className="mb-8 max-w-xl mx-auto">
+            <form onSubmit={handleSearch} className="flex">
+                <input
+                    type="text"
+                    placeholder="Search for movies..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="flex-grow px-4 py-3 border border-white-300 rounded-l-full focus:outline-none focus:ring-2 focus:ring-white-500 bg-white font-black font-normal"
+                />
+                <button
+                    type="submit"
+                    className="bg-blue-600 text-white px-6 py-3 rounded-r-full hover:bg-blue-700 transition duration-300 flex items-center"
+                >
+                    <Search className="mr-2" />
+                    Search
+                </button>
+            </form>
+        </div>
+    );
+};
+
+export default SearchBar;
