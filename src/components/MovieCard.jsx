@@ -15,7 +15,7 @@ const MovieCard = ({ movie }) => {
     return (
         <div
             onClick={handleMovieClick}
-            className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+            className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl relative"
         >
             <div className="relative">
                 <img
@@ -34,6 +34,17 @@ const MovieCard = ({ movie }) => {
                     <span className="text-gray-600">{new Date(movie.release_date).getFullYear()}</span>
                     <Film className="text-blue-500" size={20} />
                 </div>
+            </div>
+
+            {/* Hover content */}
+            <div className="absolute inset-0 bg-black bg-opacity-80 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white p-4 text-center">
+                <p className="mb-4 text-sm">{movie.overview.slice(0, 150)}...</p>
+                <button
+                    onClick={handleMovieClick}
+                    className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 w-full rounded-md transition-all"
+                >
+                    Explore
+                </button>
             </div>
         </div>
     );

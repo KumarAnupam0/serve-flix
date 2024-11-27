@@ -34,7 +34,7 @@ const MovieDetail = () => {
         <div className="container mx-auto px-4 py-8">
             <button
                 onClick={() => navigate('/')}
-                className="mb-4 flex items-center text-blue-600 hover:text-blue-800"
+                className="mb-4 flex items-center bg-white text-black border border-black-300 rounded-full px-4 py-2 hover:bg-black hover:text-white transition duration-300"
             >
                 <ArrowLeft className="mr-2" /> Back to Movies
             </button>

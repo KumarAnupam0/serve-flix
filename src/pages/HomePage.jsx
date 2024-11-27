@@ -27,11 +27,11 @@ const HomePage = () => {
 
     return (
 
-        <div className="bg-gray-50 min-h-screen">
+        <div className="bg-white min-h-screen">
             <div className="bg-blue-600 py-6 px-4">
 
                 <div className="container mx-auto">
-                    <h1 className="font-bold text-white text-3xl">ServeCenter</h1>
+                    <h1 className="font-bold text-white text-3xl text-center mb-3">ServeCenter</h1>
                     <SearchBar/>
                 </div>
             </div>

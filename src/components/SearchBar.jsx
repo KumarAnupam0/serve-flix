@@ -26,10 +26,9 @@ const SearchBar = () => {
                 <button
                     type="submit"
                     //Check
-                    className="bg-blue-600 text-white px-6 py-3 rounded-r-full border-white border-200 hover:bg-blue-700 transition duration-300 flex items-center border border-black-300"
+                    className="bg-white px-6 py-3 rounded-r-full text-black"
                 >
                     <Search className="mr-2" />
-                    Search
                 </button>
             </form>
         </div>

@@ -8,7 +8,7 @@ function App() {
     return (
         <MovieProvider>
             <Router>
-                <div className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-200">
+                <div className="min-h-screen bg-black ">
                     <Routes>
                         <Route path="/" element={<HomePage />} />
                         <Route path="/movie/:id" element={<MovieDetail />} />
