@@ -9,7 +9,7 @@ export const MovieProvider = ({ children }) => {
     const [error, setError] = useState(null);
 
     const TMDB_BASE_URL = 'https://api.themoviedb.org/3';
-    const TMDB_API_KEY = '0cd621d7a9306d1cc233c041901161a6'; // Replace with your key
+    const TMDB_API_KEY = '0cd621d7a9306d1cc233c041901161a6';
 
     const fetchMovies = async (query = '') => {
         setLoading(true);

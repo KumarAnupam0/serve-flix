@@ -36,7 +36,6 @@ const MovieCard = ({ movie }) => {
                 </div>
             </div>
 
-            {/* Hover content */}
             <div className="absolute inset-0 bg-black bg-opacity-80 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white p-4 text-center">
                 <p className="mb-4 text-sm">{movie.overview.slice(0, 150)}...</p>
                 <button
