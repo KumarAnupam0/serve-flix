@@ -47,26 +47,26 @@ const MovieDetail = () => {
                         className="w-full h-auto object-cover"
                     />
                 </div>
-                <div className="md:w-2/3 p-6">
+                <div className="md:w-2/3 p-6 text-black">
                     <h1 className="text-3xl font-bold mb-4">{movie.title}</h1>
 
                     <div className="flex items-center mb-4 space-x-4">
-                        <div className="flex items-center">
+                        <div className="flex items-center bg-white rounded drop-shadow p-3">
                             <Star className="text-yellow-400 mr-2" fill="currentColor" />
                             <span>{movie.vote_average.toFixed(1)}/10</span>
                         </div>
-                        <div className="flex items-center">
+                        <div className="flex items-center bg-white rounded drop-shadow p-3">
                             <Calendar className="mr-2 text-blue-500" />
                             <span>{new Date(movie.release_date).getFullYear()}</span>
                         </div>
-                        <div className="flex items-center">
+                        <div className="flex items-center bg-white rounded drop-shadow p-3``">
                             <Clock className="mr-2 text-green-500" />
                             <span>{movie.runtime} min</span>
                         </div>
                     </div>
 
                     <h2 className="text-xl font-semibold mt-4">Overview</h2>
-                    <p className="text-gray-600 mb-4">{movie.overview}</p>
+                    <p className="text-gray-600 mb-4 bg-white drop-shadow-lg rounded-3xl p-10">{movie.overview}</p>
 
                     <div className="grid md:grid-cols-2 gap-4">
                         <div>
