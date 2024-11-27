@@ -27,8 +27,7 @@ Serve-Flix is a React-based movie app that provides users with a sleek and respo
 
 ## 🌐 **Live Demo**
 
-Check out the live demo: **[Serve-Flix on Vercel](#)**  
-*(Replace `#` with your Vercel deployment link)*
+Check out the live demo: **[Serve-Flix on Vercel](https://serve-flix.vercel.app/)**  
 
 ---
 
