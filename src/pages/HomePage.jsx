@@ -45,7 +45,7 @@ const HomePage = () => {
                     </button>
 
                     <h1 className="font-bold text-white text-3xl text-center pr-20 font-sans">
-                        ServeCenter
+                        &#x2022;  ServeCenter   &#x2022;
                     </h1>
                     <div></div>
                 </div>
