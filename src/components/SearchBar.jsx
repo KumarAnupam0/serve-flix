@@ -21,11 +21,11 @@ const SearchBar = () => {
                     placeholder="Search for movies..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="flex-grow px-4 py-3 border border-white-300 rounded-l-full focus:outline-none focus:ring-2 focus:ring-white-500 bg-white font-black font-normal"
+                    className="flex-grow px-4 py-3 border border-white-300 rounded-l-full focus:outline-none focus:ring-2 focus:ring-black-500 bg-white text-black font-normal"
                 />
                 <button
                     type="submit"
-                    className="bg-blue-600 text-white px-6 py-3 rounded-r-full hover:bg-blue-700 transition duration-300 flex items-center"
+                    className="bg-blue-600 text-white    px-6 py-3 rounded-r-full border-white border-200 hover:bg-blue-700 transition duration-300 flex items-center border border-black-300"
                 >
                     <Search className="mr-2" />
                     Search
