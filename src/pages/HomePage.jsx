@@ -2,13 +2,21 @@ import React, { useEffect } from "react";
 import { useMovies } from "../context/MovieContext";
 import MovieCard from "../components/MovieCard";
 import SearchBar from "../components/SearchBar";
+import { useNavigate } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 
 const HomePage = () => {
     const { movies, loading, error, fetchMovies } = useMovies();
+    const navigate = useNavigate();
 
     useEffect(() => {
-        fetchMovies();
+        fetchMovies(); // Load movies initially
     }, []);
+
+    const handleHomeClick = () => {
+        fetchMovies(); // Reset the movie list to default
+        navigate("/"); // Navigate to the root page if needed
+    };
 
     if (loading)
         return (
@@ -26,13 +34,24 @@ const HomePage = () => {
         );
 
     return (
-
         <div className="bg-white min-h-screen">
-            <div className="bg-blue-600 py-6 px-4">
+            <div className="bg-black py-4 px-4">
+                <div className="container mx-auto flex items-center justify-between">
+                    <button
+                        className="flex items-center text-white hover:text-gray-200 transition-all bg-black"
+                        onClick={handleHomeClick}
+                    >
+                        <ArrowLeft className="mr-2" /> Home
+                    </button>
 
-                <div className="container mx-auto">
-                    <h1 className="font-bold text-white text-3xl text-center mb-3">ServeCenter</h1>
-                    <SearchBar/>
+                    <h1 className="font-bold text-white text-3xl text-center pr-20 font-sans">
+                        ServeCenter
+                    </h1>
+                    <div></div>
+                </div>
+
+                <div className="mt-4">
+                    <SearchBar />
                 </div>
             </div>
 
@@ -46,7 +65,6 @@ const HomePage = () => {
                     ))}
                 </div>
             </div>
-
         </div>
     );
 };
